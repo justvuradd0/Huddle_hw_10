@@ -136,12 +136,12 @@ main section {
   border-radius: 16px;
 }
 
-.content_Grow,
-.content_Users {
+.content_grow,
+.content_users {
   max-width: 499px;
   margin-inline: 120px 160px;
 }
-.content_Flowing {
+.content_flowing {
   max-width: 499px;
   margin-inline: 155px 20px;
   margin-inline-start: auto;
@@ -160,37 +160,37 @@ section {
   margin-inline-end: auto;
   padding-inline: 10px;
 }
-.Grow {
+.grow {
   margin-block: 179px 40px;
   margin-inline: auto;
   position: relative;
 }
 
-.Flowing {
+.flowing {
   margin-block: 40px;
   margin-inline: auto;
   position: relative;
 }
-.Users {
+.users {
   margin-block: 40px 344px;
   margin-inline: auto;
   position: relative;
 }
-.img_Grow {
+.img_grow {
   position: absolute;
   top: 0;
   right: 0;
   transform: translate(-9%, 13.5%);
 }
 
-.img_Flowing {
+.img_flowing {
   position: absolute;
   top: 0;
   left: 0;
   transform: translate(31%, 22%);
 }
 
-.img_Users {
+.img_users {
   position: absolute;
   top: 0;
   right: 0;
@@ -240,7 +240,6 @@ footer .container {
   max-width: 1290px;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  /* padding-inline: 10px; */
   padding-block-start: 144px;
   padding-block-end: 64px;
 }
@@ -248,21 +247,30 @@ footer .container {
   margin-block-end: 32px;
 }
 
+.flx_c {
+  display: flex;
+  flex-direction: column;
+}
+
+
 .container_flx {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /* justify-content: space-between; */
   position: relative;
+  justify-content: flex-start;
+  gap: 140px;
 }
 
 address {
   max-width: 390px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-} 
-address p::before{
-  content: '';
+  gap: 16px;
+  margin-inline-start: 40px;
+}
+address a::before {
+  content: "";
   width: 24px;
   height: 24px;
   display: inline-block;
@@ -270,6 +278,8 @@ address p::before{
   /* background-size: contain; */
   position: absolute;
   left: 0;
+  transform: translateY(15%);
+
 }
 
 address .location::before {
@@ -288,11 +298,16 @@ address .email::before {
 .footer_links {
   display: flex;
   justify-content: space-between;
-  gap: 100px;
+  gap: 140px;
 }
+.footer_links div {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .footer_links a {
   display: block;
-  padding-block-end: 30px;
 }
 
 .footer_links a:hover {
@@ -302,8 +317,11 @@ address .email::before {
 .footer_socials {
   display: flex;
   gap: 15px;
-  width: 33px;
+  width: 130px;
   height: 31px;
+  /* position: relative;
+  top: 0;
+  right: 10%; */
 }
 
 .icon img.hover {
@@ -315,13 +333,13 @@ address .email::before {
 
 .icon:hover img.hover {
   display: inline;
-
-
 }
 
-
 .footer_copy {
-  text-align: right;
-  padding-block-end: 63px;
-  padding-inline-end: 78px;
+  /* text-align: right; */
+  align-self: flex-end; 
+  font-size: 12px;
+  line-height: 18px;
+  position: relative;
+  top: -15px;
 }
